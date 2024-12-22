@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match Scores</title>
+</head>
+<body>
+  <h1>Scores de Matchs</h1>
+  <ul id="scores"></ul>
+  <script>
+    fetch("http://localhost:3001/scores")
+      .then(response => response.json())
+      .then(data => {
+        const scoresList = document.getElementById("scores");
+        data.forEach(match => {
+          const li = document.createElement("li");
+          li.textContent = `${match.team1} vs ${match.team2}: ${match.score}`;
+          scoresList.appendChild(li);
+        });
+      })
+      .catch(err => console.error(err));
+  </script>
+</body>
+</html>
