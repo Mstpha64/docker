@@ -15,7 +15,7 @@ Installation et utilisation
 1. Cloner le projet
 Clonez le dépôt Git sur votre machine locale.
 
-git clone <URL_DE_VOTRE_REPOSITORY>
+git clone https://github.com/Mstpha64/docker/
 cd <nom_du_dossier>
 
 2. Construire et lancer l'application avec Docker
